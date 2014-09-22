@@ -9,6 +9,7 @@
 	},
 
 	"dependencies": {
+		"q": "1.0.1",
 		"superagent": "0.18.2"
 	},
 }
