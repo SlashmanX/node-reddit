@@ -1,0 +1,14 @@
+{
+	"name": "node-reddit",
+	"version": "0.0.1",
+	"description": "Simple Reddit API for Node.js.",
+	"main": "node-reddit.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/SlashmanX/node-reddit.git"
+	},
+
+	"dependencies": {
+		"superagent": "0.18.2"
+	},
+}
