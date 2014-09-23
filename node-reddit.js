@@ -1,19 +1,18 @@
 var Q = require('q');
-var agent = require('./lib/agent.js');
+var Agent = require('./lib/agent.js');
+var agent;
 
 var TOKEN = '';
 
-exports.Reddit = function(token) {
+var Reddit = function(token) {
 	this.TOKEN = token;
+	agent = new Agent(token);
 }
 
-exports.Reddit.prototype.user = function(username) {
+Reddit.prototype.u = function(username) {
 	var defer = Q.defer();
-	agent.getAccountInfo(username, function(err, res) {
-		if(err) defer.reject(err);
-		defer.resolve(res);
-	})
-	return defer.promise;
+	if(!username) return agent.identity.me();
+	return agent.identity.me();
 }
 
-exports.Reddit = Reddit;
+module.exports = Reddit;
