@@ -9,6 +9,11 @@ var Reddit = function(token) {
 	agent = new Agent(token);
 }
 
+Reddit.prototype.setToken = function(token) {
+	this.TOKEN = token;
+	agent.setToken(token);
+}
+
 Reddit.prototype.u = function(username) {
 	var defer = Q.defer();
 	if(!username) return agent.identity.me();
