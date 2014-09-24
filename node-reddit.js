@@ -22,8 +22,8 @@ Reddit.prototype.u = function(username) {
 
 Reddit.prototype.r = function(sub) {
 	var defer = Q.defer();
-	if(!sub) return agent.mysubbreddits.subscriber();
-	return agent.mysubbreddits.subscriber();
+	if(!sub) return agent.mysubreddits.subscriber();
+	return agent.mysubreddits.subscriber();
 }
 
 module.exports = Reddit;
