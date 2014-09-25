@@ -26,4 +26,8 @@ Reddit.prototype.r = function(sub) {
 	return agent.mysubreddits.subscriber();
 }
 
+Reddit.prototype.homepage = function(opts) {
+	return agent.read.hot(opts);
+}
+
 module.exports = Reddit;
