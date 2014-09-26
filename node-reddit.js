@@ -20,9 +20,12 @@ Reddit.prototype.u = function(username) {
 	return agent.identity.me();
 };
 
-Reddit.prototype.r = function(sub) {
+Reddit.prototype.r = function(sub, opts) {
 	var defer = Q.defer();
-	if(!sub) return agent.mysubreddits.subscriber();
+	return agent.read.r(sub, opts);
+}
+
+Reddit.prototype.subscriber = function() {
 	return agent.mysubreddits.subscriber();
 }
 
