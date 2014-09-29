@@ -33,4 +33,8 @@ Reddit.prototype.homepage = function(opts) {
 	return agent.read.homepage(opts);
 }
 
+Reddit.prototype.submission = function(article, opts) {
+	return agent.read.submission(article, opts);
+}
+
 module.exports = Reddit;
