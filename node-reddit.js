@@ -30,7 +30,7 @@ Reddit.prototype.subscriber = function() {
 }
 
 Reddit.prototype.homepage = function(opts) {
-	return agent.read.hot(opts);
+	return agent.read.homepage(opts);
 }
 
 module.exports = Reddit;
