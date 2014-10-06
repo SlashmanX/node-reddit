@@ -37,7 +37,7 @@ Reddit.prototype.submission = function(article, opts) {
 	return agent.read.submission(article, opts);
 }
 
-Reddit.prototype.vpvote = function(thing) {
+Reddit.prototype.upvote = function(thing) {
 	return agent.vote({
 		id: thing,
 		dir: 1
