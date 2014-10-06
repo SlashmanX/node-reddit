@@ -37,4 +37,25 @@ Reddit.prototype.submission = function(article, opts) {
 	return agent.read.submission(article, opts);
 }
 
+Reddit.prototype.vpvote = function(thing) {
+	return agent.vote({
+		id: thing,
+		dir: 1
+	})
+}
+
+Reddit.prototype.downvote = function(thing) {
+	return agent.vote({
+		id: thing,
+		dir: -1
+	})
+}
+
+Reddit.prototype.unvote = function(thing) {
+	return agent.vote({
+		id: thing,
+		dir: 0
+	})
+}
+
 module.exports = Reddit;
