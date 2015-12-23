@@ -1,8 +1,8 @@
 var Reddit = require('./node-reddit');
-var reddit = new Reddit('72l8gcTRgRbZotsejYJOhNNzd9A');
+var reddit = new Reddit('10091845-ozSJsxhks7LKlX8_eOiXOlQ5Xgc');
 
 reddit
-	.u()
+	.r('soccer', {'sort': 'new'})
 	.then(function(res) {
 		console.log(res);
 	}).catch(function(err){
